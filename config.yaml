@@ -1,0 +1,64 @@
+data:
+  train_csv: "D:\\MSU\\Coding\\PYTHON\\7 term\\main_pizza_classifier\\data\\train.csv"
+  classes_csv: "D:\\MSU\\Coding\\PYTHON\\7 term\\main_pizza_classifier\\data\\classes.csv"
+  train_img_dir: "D:\\MSU\\Coding\\PYTHON\\7 term\\main_pizza_classifier\\data\\train_256"
+  test_img_dir: "D:\\MSU\\Coding\\PYTHON\\7 term\\main_pizza_classifier\\data\\test_256"
+  test_csv: "D:\\MSU\\Coding\\PYTHON\\7 term\\OmegaConf\\data\\submission.csv"
+  image_size: 256
+  batch_size: 24
+  val_size: 0.25
+  num_workers: 0
+  stratify: false
+  random_state: 42
+
+model:
+  architecture: 'mamedov_model'
+  num_classes: 46
+  dropout: 0.5
+
+
+training:
+  epochs: 50
+  lr: 0.001
+  weight_decay: 0.002
+  max_patience: 5
+
+
+
+  
+  # train_path: "data/train/"
+  # val_path: "data/val/"
+  # test_path: "data/test/"
+  # input_size: [224, 224]
+  # augmentations:
+  #   horizontal_flip: true
+  #   rotation: 15
+  #   scale: [0.8, 1.2]
+
+# model:
+#   architecture: ""
+#   num_classes: 46
+#   dropout: 0.5
+
+# training:
+#   batch_size: 32
+#   epochs: 50
+#   learning_rate: 0.001
+#   optimizer: "adam"
+#   weight_decay: 0.0001
+#   scheduler:
+#     type: "step"
+#     step_size: 10
+#     gamma: 0.1
+#   early_stopping:
+#     enabled: true
+#     patience: 5
+
+# testing:
+#   batch_size: 64
+#   metrics:
+#     - "accuracy"
+#     - "f1_score"
+#     - "precision"
+#     - "recall"
+
